@@ -37,11 +37,16 @@
             color: #AAAAAA;
         }
         .content img {
-            width: 100%;
+            width: 50%;
             max-width: 50vw;
             height: auto;
             object-fit: contain;
+
+            @media (min-width: 1280px) {
+                max-width: 25vw;
+            }
         }
+
     </style>
 </head>
 <body>
