@@ -5,23 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whitebark software</title>
     <style>
+        @font-face {
+            font-family: 'TeXGyreBonumRegular';
+            src: url('fonts/TexGyreBonum/texgyrebonum-regular-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body {
-            background-color: #2e302f;
             margin: 0;
+            background-color: #2e302f;
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100vw;
             height: 100vh;
         }
-        img {
-            width: 25vw;
-	    height: 25vh;
-	    object-fit: contain;
+        h4 {
+            font-family: 'TeXGyreBonumRegular', sans-serif;
+            font-size: 2rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .content {
+            margin: 0;
+            color: #AAAAAA;
+        }
+        .content img {
+            width: 20vw;
+            height: auto;
+            display: block;
+            object-fit: contain;
         }
     </style>
 </head>
 <body>
-    <img src="whitebark-logo.png">
+    <div class="content">
+        <img src="whitebark-logo.png">
+        <h4>Whitebark Software</h4>
+    </div>
 </body>
 </html>
 
