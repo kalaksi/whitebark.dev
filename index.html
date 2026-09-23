@@ -3,58 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whitebark software</title>
-    <style>
-        @font-face {
-            font-family: 'TeXGyreBonumRegular';
-            src: url('fonts/TexGyreBonum/texgyrebonum-regular-webfont.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        body {
-            margin: 0;
-            background-color: #202221;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100vw;
-            height: 100vh;
-        }
-
-        h1 {
-            font-family: 'TeXGyreBonumRegular', sans-serif;
-            font-size: 1.5rem;
-            margin-top: 1rem;
-            text-align: center;
-        }
-
-        .content {
-            margin: 0;
-            margin-top: 5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: #AAAAAA;
-        }
-        .content img {
-            width: 50%;
-            max-width: 50vw;
-            height: auto;
-            object-fit: contain;
-
-            @media (min-width: 1280px) {
-                max-width: 25vw;
-            }
-        }
-
-    </style>
+    <title>Whitebark Software</title>
+    <meta name="description" content="Whitebark Software builds Lightkeeper, a tool for maintaining Linux hosts over SSH.">
+    <meta name="theme-color" content="#202221">
+    <meta property="og:title" content="Whitebark Software">
+    <meta property="og:description" content="Whitebark Software builds Lightkeeper, a tool for maintaining Linux hosts over SSH.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://whitebark.dev/">
+    <meta property="og:image" content="https://whitebark.dev/images/og.png">
+    <link rel="icon" href="/whitebark-logo.png" type="image/png">
+    <link rel="stylesheet" href="/site.css">
 </head>
 <body>
-    <div class="content">
-        <img src="whitebark-logo.png">
-        <h1>Whitebark Software</h1>
-    </div>
+    <a class="skip" href="#content">Skip to content</a>
+    <header class="site-header">
+        <a class="brand" href="/">
+            <img src="/whitebark-logo.png" alt="" width="36" height="36">
+            Whitebark.dev
+        </a>
+        <nav>
+            <a href="/" aria-current="page">Home</a>
+            <a href="/donate/">Donate</a>
+            <a href="/about/">About</a>
+        </nav>
+    </header>
+
+    <main id="content">
+        <div class="intro">
+            <img class="mark" src="/whitebark-logo.png" width="112" height="112" alt="Whitebark mark: a leaning pine in a circle with a W">
+            <div>
+                <h1>Whitebark Software</h1>
+                <p class="tagline">Good tools make lighter work.</p>
+            </div>
+        </div>
+
+        <p><a href="#lightkeeper">Lightkeeper</a> helps you maintain Linux hosts over SSH.</p>
+
+        <section id="lightkeeper">
+            <h2>Lightkeeper</h2>
+            <p>Lightkeeper brings host status, logs, files, and terminals together, reducing repetitive shell work. It connects over SSH and uses standard Linux commands, so nothing needs to be installed on your servers. Its debug log shows the commands it runs.</p>
+
+            <div class="shots">
+                <figure>
+                    <img src="/images/lightkeeper/overview.png" alt="Host list with a status marker on each row, and a detail view for one host showing uptime, memory, and storage.">
+                    <figcaption>Host table with a status summary.</figcaption>
+                </figure>
+                <figure>
+                    <img src="/images/lightkeeper/terminal.png" alt="A shell session open on a host, in a tab next to the host logs.">
+                    <figcaption>Integrated terminal. <kbd>Ctrl-T</kbd> opens one.</figcaption>
+                </figure>
+                <figure>
+                    <img src="/images/lightkeeper/logs.png" alt="Log viewer with a search field and matching lines highlighted.">
+                    <figcaption>Searchable logs with colorized <kbd>journalctl</kbd> output.</figcaption>
+                </figure>
+                <figure>
+                    <img src="/images/lightkeeper/certificates.png" alt="Certificate monitor listing an address, the certificate issuer, and the days until expiry.">
+                    <figcaption>Certificate expiry checks.</figcaption>
+                </figure>
+            </div>
+
+            <ul>
+                <li>Alerts when a host's status changes.</li>
+                <li>Remote file browsing and editing.</li>
+                <li>Hotkeys throughout, so you can work without digging through menus.</li>
+            </ul>
+
+            <p>Lightkeeper is for people who manage several Linux machines and want the flexibility of the shell with less repetition. It currently supports Debian, Ubuntu, RHEL, Fedora, Fedora CoreOS, Alpine, and NixOS, with basic support for other Linux distributions.</p>
+
+            <h3>Install</h3>
+            <ol>
+                <li>Install from <a href="https://flathub.org/en/apps/io.github.kalaksi.Lightkeeper">Flathub</a>. Sandboxed, with the minimum permissions required.</li>
+                <li>Download a Debian or Fedora package from <a href="https://github.com/kalaksi/lightkeeper/releases">GitHub Releases</a>.</li>
+                <li><a href="https://github.com/kalaksi/lightkeeper#building-from-source">Build from source</a>.</li>
+            </ol>
+
+            <p>Lightkeeper is licensed under GPLv3. Commercial licensing is also available. See <a href="/about/">About</a> for how to get in touch.</p>
+            <p><a href="/donate/">Support Lightkeeper's development</a>.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a href="https://github.com/kalaksi">GitHub</a>
+        <a href="https://gitlab.com/kalaksi">GitLab</a>
+        <a href="/donate/">Donate</a>
+        <a href="https://github.com/kalaksi/whitebark.dev">Source</a>
+        <span>2026</span>
+    </footer>
 </body>
 </html>
-
